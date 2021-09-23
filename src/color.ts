@@ -17,7 +17,7 @@ const colorBrand: color = {
   Grey: '#737580',
   GreySaturated: '#B8BACC',
   Primary: '#2542F7',
-  PrimaryBrightness: '#1327AB',
+  PrimaryBrightness: '#172FCC',
   PrimarySaturated: '#405AFF',
   Secundary: '#F7BF0A',
   SecundaryBrightness: '#E5B109',
