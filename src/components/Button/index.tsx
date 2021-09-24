@@ -6,9 +6,11 @@ type ButtonProps = {
   fullWidth?: boolean
 }
 
-export default function Button({ placeholder }: ButtonProps){
+export default function Button({ placeholder, fullWidth }: ButtonProps){
   return(
-    <Container>
+    <Container style={{
+      width: `${fullWidth && "100%"}`
+    }}>
       {placeholder}
     </Container>
   )

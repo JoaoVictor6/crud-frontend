@@ -22,4 +22,8 @@ export const Container = styled.button`
   &:active {
     box-shadow: 0 1px 4px 0 rgba(0,0,0, 0.51);;
   }
+
+  .full-width {
+    width: 100%;
+  }
 `;
