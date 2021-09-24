@@ -1,6 +1,6 @@
 interface color {
   Black: string,
-  Error: string,
+  ErrorColor: string,
   Grey: string,
   GreySaturated: string,
   Primary: string,
@@ -13,7 +13,7 @@ interface color {
 
 const colorBrand: color = {
   Black: '#04071A',
-  Error: '#FF4040',
+  ErrorColor: '#FF4040',
   Grey: '#737580',
   GreySaturated: '#B8BACC',
   Primary: '#2542F7',
