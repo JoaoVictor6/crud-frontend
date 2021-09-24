@@ -1,8 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
+import colorBrand from 'src/color';
+const { PrimarySaturated, Primary, PrimaryBrightness } = colorBrand
 
 export default createGlobalStyle`
   :root {
     font-size: 16px;
+  }
+
+  body {
+    background: #f2f2f2;
   }
 
   * {
@@ -41,5 +47,19 @@ export default createGlobalStyle`
   }
   span {
     font-size: 0.875rem;
+  }
+
+  a {
+    color: ${PrimarySaturated};
+    font-size: 1rem;
+    text-decoration: none;
+
+    &:hover {
+      color: ${Primary};
+    }
+
+    &:active {
+      color: ${PrimaryBrightness};
+    }
   }
 `;
