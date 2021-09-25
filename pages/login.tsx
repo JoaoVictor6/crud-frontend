@@ -75,7 +75,7 @@ export default function Login(){
           />
           <ButtonAndAnchorSection>
             <Button fullWidth placeholder="Entrar"/>
-            <Link href="/login">Clique aqui para registrar-se</Link>
+            <Link href="/register">Clique aqui para registrar-se</Link>
           </ButtonAndAnchorSection>
         </Form>
       </Cards>
