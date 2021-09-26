@@ -6,27 +6,26 @@ import Cards from '@components/Cards'
 import { ErrorField, Input } from '@components/Input'
 import { ButtonAndAnchorSection, Container, Form, FormTitle } from '@PagesStyles/LoginPage'
 
-// type ErrorField = {
-//   isInvalid: boolean,
-//   messageError: string
-// }
+type FormInputProps = {
+  email: string
+  password: string
+}
 
 export default function Login(){
-  const [password, setPassword] = useState('')
-  const [email, setEmail] = useState('')
   const [emailFieldIsValid, setEmailFieldIsValid] = useState({} as ErrorField)
   const [passwordFieldIsValid, setPasswordFieldIsValid] = useState({} as ErrorField)
+  const [formInput, setFormInput] = useState<FormInputProps>({ email: '', password: '' })
 
-  function passwordHandler(event:ChangeEvent<HTMLInputElement>){
-    const value = event.target.value
-    setPassword(value)
-  }
-  function emailHandler(event:ChangeEvent<HTMLInputElement>){
-    const value = event.target.value
-    setEmail(value)
+  function inputHandler(event:ChangeEvent<HTMLInputElement>){
+    setFormInput({
+      ...formInput,
+      [event.target.name]: event.target.value
+    })
   }
 
   function submitFormHandler(event:FormEvent) {
+    const { email, password } = formInput
+    event.preventDefault()
     if(email.length === 0){
       setEmailFieldIsValid({isInvalid: true, messageError: 'Empty field'})
     }
@@ -35,7 +34,7 @@ export default function Login(){
         isInvalid: true, 
         messageError: 'password must be at least 8 characterspassword must be at least 8 characters'
       })
-      return event.preventDefault()
+      return
     }
     setPasswordFieldIsValid({ 
       ...passwordFieldIsValid,
@@ -55,22 +54,24 @@ export default function Login(){
       <Cards>
         <FormTitle className="title-section text-center">Login</FormTitle>
         <Form onSubmit={submitFormHandler}>
-          <Input 
+          <Input
+            name="email"
             idForInput="email" 
             type="email" 
             placeholder="Digite seu E-mail" 
             labelText="E-mail"
-            value={email}
-            onChange={emailHandler}
+            value={formInput.email}
+            onChange={inputHandler}
             ErrorField={emailFieldIsValid}
           />
-          <Input 
+          <Input
+            name="password"
             idForInput="password" 
             type="password"
             placeholder="Digite sua senha" 
             labelText="Password"
-            value={password}
-            onChange={passwordHandler}
+            value={formInput.password}
+            onChange={inputHandler}
             ErrorField={passwordFieldIsValid}
           />
           <ButtonAndAnchorSection>
