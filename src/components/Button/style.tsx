@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import colorBrand from 'src/color';
-const { Primary, PrimarySaturated, PrimaryBrightness } = colorBrand
+const { Primary, PrimaryBrightness } = colorBrand;
 export const Container = styled.button`
   border: none;
   background: ${Primary};

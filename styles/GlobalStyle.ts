@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 import colorBrand from 'src/color';
-const { PrimarySaturated, Primary, PrimaryBrightness } = colorBrand
+const { PrimarySaturated, Primary, PrimaryBrightness } = colorBrand;
 
 export default createGlobalStyle`
   :root {

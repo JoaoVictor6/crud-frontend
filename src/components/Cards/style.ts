@@ -1,7 +1,7 @@
 import colorBrand from 'src/color';
 import styled from 'styled-components';
 import hexToRgb from 'src/utils/hexToRgb';
-const { White, Black } = colorBrand
+const { White, Black } = colorBrand;
 
 export const Container = styled.section`
   background: ${White};

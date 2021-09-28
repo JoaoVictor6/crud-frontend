@@ -1,5 +1,5 @@
-import { ChangeEvent, DetailedHTMLProps, InputHTMLAttributes } from "react";
-import { Container } from "./style";
+import { ChangeEvent, DetailedHTMLProps, InputHTMLAttributes } from 'react';
+import { Container } from './style';
 
 interface UploadButtonProps extends DetailedHTMLProps<
   InputHTMLAttributes<HTMLInputElement>, 
@@ -9,25 +9,29 @@ interface UploadButtonProps extends DetailedHTMLProps<
   label: string
 }
 
-export default function UploadButton({label, onChangeEvent, ...props}: UploadButtonProps){
-  return(
-    <Container htmlFor="file-upload">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-        <path 
-          fillRule="evenodd" 
-          d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" 
-          clipRule="evenodd" 
-        />
-      </svg>
-      {label}
-      <input 
-        {...props} 
-        id="file-upload" 
-        type="file" 
-        accept="image/*" 
-        name="image" 
-        onChange={onChangeEvent}
-      />
-    </Container>
-  )
+export default function UploadButton({ 
+	label,
+	onChangeEvent,
+	...props 
+}: UploadButtonProps): JSX.Element{
+	return(
+		<Container htmlFor="file-upload">
+			<svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+				<path 
+					fillRule="evenodd" 
+					d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" 
+					clipRule="evenodd" 
+				/>
+			</svg>
+			{label}
+			<input 
+				{...props} 
+				id="file-upload" 
+				type="file" 
+				accept="image/*" 
+				name="image" 
+				onChange={onChangeEvent}
+			/>
+		</Container>
+	);
 }

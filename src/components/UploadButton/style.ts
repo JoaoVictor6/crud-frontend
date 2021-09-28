@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import colorBrand from 'src/color';
-const { Primary, PrimarySaturated, Grey, GreySaturated} = colorBrand
+const { Primary, PrimarySaturated } = colorBrand;
 
 export const Container = styled.label`
   display: inline-flex;
