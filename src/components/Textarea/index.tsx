@@ -1,30 +1,28 @@
-import { ChangeEvent, ChangeEventHandler, useEffect, useState } from "react";
+import { ChangeEvent, ChangeEventHandler, DetailedHTMLProps, TextareaHTMLAttributes, useEffect, useState } from "react";
 import { Container, TextAreaDiv, TextAreaHeader } from "./style";
 
-interface TextareaProps{
-  labelText: string;
-  idForLabel: string;
-  maxChar: number;
+interface TextareaProps extends DetailedHTMLProps<
+  TextareaHTMLAttributes<HTMLTextAreaElement>, 
+  HTMLTextAreaElement>
+{
+  labelText: string
+  idForLabel: string
+  maxChar: number
+  totalChar: number
 }
 
-export default function Textarea({ labelText, idForLabel, maxChar }: TextareaProps){
-  const [totalLetters, setTotalLetters ] = useState<number>(0)
-  function textareaHandler(event: ChangeEvent<HTMLTextAreaElement>){
-    const value = event.target.value.length
-    if(value > maxChar)return
-    setTotalLetters(value)
-  }
+export default function Textarea({ labelText, idForLabel, maxChar, totalChar, ...props }: TextareaProps){
   return(
     <Container>
       <TextAreaHeader>
         <label htmlFor={idForLabel}>{labelText}</label>
-        <span>{totalLetters}/{maxChar}</span>
+        <span>{totalChar}/{maxChar}</span>
       </TextAreaHeader>
       <TextAreaDiv>
         <textarea 
+          { ...props }
           spellCheck
           id={idForLabel} 
-          onChange={textareaHandler}
         />
       </TextAreaDiv>
     </Container>
