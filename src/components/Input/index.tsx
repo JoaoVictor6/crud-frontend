@@ -6,28 +6,30 @@ export type ErrorField = {
   messageError: string
 }
 
-interface inputProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>{
+interface inputProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
   idForInput: string;
   labelText: string;
   ErrorField: ErrorField;
 }
 
-export function Input({idForInput,labelText, ErrorField, ...props}: inputProps){
+export function Input({ idForInput, labelText, ErrorField, ...props }: inputProps) {
   return (
-    <Container>
-      <label htmlFor={idForInput}>{labelText}</label>
-      <input  
-        style={{
-          borderColor: ErrorField.isInvalid 
-            ? colorBrand.ErrorColor 
-            : colorBrand.GreySaturated
-        }} 
-        id={idForInput} 
-        {...props} 
-      />
-      {ErrorField.isInvalid && (
-        <span>*{ErrorField.messageError || 'User is invalid'}</span>
-      )}
-    </Container>
+    <>
+      <Container>
+        <label htmlFor={idForInput}>{labelText}</label>
+        <input
+          style={{
+            borderColor: ErrorField.isInvalid
+              ? colorBrand.ErrorColor
+              : colorBrand.GreySaturated
+          }}
+          id={idForInput}
+          {...props}
+        />
+        {ErrorField.isInvalid && (
+          <span>*{ErrorField.messageError || 'User is invalid'}</span>
+        )}
+      </Container>
+    </>
   )
 }
