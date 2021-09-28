@@ -1,5 +1,5 @@
-import { ChangeEvent, ChangeEventHandler, DetailedHTMLProps, TextareaHTMLAttributes, useEffect, useState } from "react";
-import { Container, TextAreaDiv, TextAreaHeader } from "./style";
+import { DetailedHTMLProps, TextareaHTMLAttributes } from 'react';
+import { Container, TextAreaDiv, TextAreaHeader } from './style';
 
 interface TextareaProps extends DetailedHTMLProps<
   TextareaHTMLAttributes<HTMLTextAreaElement>, 
@@ -11,20 +11,26 @@ interface TextareaProps extends DetailedHTMLProps<
   totalChar: number
 }
 
-export default function Textarea({ labelText, idForLabel, maxChar, totalChar, ...props }: TextareaProps){
-  return(
-    <Container>
-      <TextAreaHeader>
-        <label htmlFor={idForLabel}>{labelText}</label>
-        <span>{totalChar}/{maxChar}</span>
-      </TextAreaHeader>
-      <TextAreaDiv>
-        <textarea 
-          { ...props }
-          spellCheck
-          id={idForLabel} 
-        />
-      </TextAreaDiv>
-    </Container>
-  )
+export default function Textarea({ 
+	labelText, 
+	idForLabel, 
+	maxChar, 
+	totalChar, 
+	...props 
+}: TextareaProps): JSX.Element{
+	return(
+		<Container>
+			<TextAreaHeader>
+				<label htmlFor={idForLabel}>{labelText}</label>
+				<span>{totalChar}/{maxChar}</span>
+			</TextAreaHeader>
+			<TextAreaDiv>
+				<textarea 
+					{ ...props }
+					spellCheck
+					id={idForLabel} 
+				/>
+			</TextAreaDiv>
+		</Container>
+	);
 }

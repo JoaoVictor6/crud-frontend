@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import colorBrand from 'src/color';
 const { Black, Grey, GreySaturated, ErrorColor } = colorBrand;
 
