@@ -12,7 +12,7 @@ interface inputProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
   ErrorField: ErrorField;
 }
 
-export function Input({ idForInput, labelText, ErrorField, ...props }: inputProps):JSX.Element {
+export default function Input({ idForInput, labelText, ErrorField, ...props }: inputProps):JSX.Element {
 	return (
 		<>
 			<Container>

@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Button from '@components/Button';
 import Cards from '@components/Cards';
-import { ErrorField, Input } from '@components/Input';
+import Input, { ErrorField } from '@components/Input';
 import { ButtonAndAnchorSection, Container, Form, FormTitle } from '@PagesStyles/LoginPage';
 
 type FormInputProps = {
@@ -53,7 +53,7 @@ export default function Login(): JSX.Element{
 			</Head>
 			<Container>
 				<Cards>
-					<FormTitle className="title-section text-center">Login</FormTitle>
+					<FormTitle className="title-section">Login</FormTitle>
 					<Form onSubmit={submitFormHandler}>
 						<Input
 							name="email"

@@ -10,4 +10,5 @@ export const Container = styled.section`
 
   display: inline-block;
   padding: 32px;
+  margin: 32px;
 `;
