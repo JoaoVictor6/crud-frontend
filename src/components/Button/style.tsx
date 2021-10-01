@@ -9,8 +9,8 @@ export const Container = styled.button`
   font-size: 1.333rem;
   color: #fff;
 
-  width: 276px;
-  padding: 16px;
+  width: 17.25rem;
+  padding: 1rem;
   cursor: pointer;
 
   box-shadow: 0 4px 4px 0 rgba(0,0,0, 0.41);

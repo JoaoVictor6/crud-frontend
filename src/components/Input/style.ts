@@ -19,7 +19,7 @@ export const Container = styled.section`
     border-radius: 8px;
     border: 1px solid ${GreySaturated};
     
-    padding: 16px 8px;
+    padding: 1rem .5rem;
 
     &::placeholder {
       color: ${Grey}
@@ -27,7 +27,7 @@ export const Container = styled.section`
   }
 
   & > span {
-    font-size: 16px;
+    font-size: 1rem;
     color: ${ErrorColor};
   }
 `;

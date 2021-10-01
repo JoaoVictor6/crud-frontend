@@ -18,12 +18,11 @@ export const ButtonAndAnchorSection = styled.section`
 
 export const FormTitle = styled.h1`
   text-align: center;
-  margin-top: calc(48px - 32px);
 `;
 
 export const InputDiv = styled.div`
   display: flex;
-  gap: 18px;
+  gap: 1.125rem;
   margin-top: 24px;
   margin-bottom: 24px;
   & > div {
@@ -34,8 +33,8 @@ export const InputDiv = styled.div`
 `;
 
 export const ProfilePicture = styled.div`
-  height: 251px;
-  width: 251px;
+  height: 251.008px;
+  width: 251.008px;
   border-radius: 100%;
   background-color: grey;
 `;
@@ -45,5 +44,5 @@ export const ProfilePictureSection = styled.section`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  gap: 8px;
+  gap: .5rem;
 `;
