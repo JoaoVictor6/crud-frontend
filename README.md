@@ -26,6 +26,17 @@ Nesse projeto decidi usar uma stack onde me sinto mais confortavél.
 - [Styled components](https://styled-components.com/)
 - [Typescript](https://www.typescriptlang.)
 
----
-Não finalizado
----
+## Como iniciar o projeto na sua máquina
+Após dar um `git clone` e um `npm install`, digite o seguinte comando para iniciar o projeto em modo de desenvolvimento:
+
+```npm dev```
+
+caso queira fazer uma build para produção, digite:
+
+```npm build```
+
+para iniciar a build:
+
+```npm start```
+
+> Caso use yarn, basta trocar o npm.
