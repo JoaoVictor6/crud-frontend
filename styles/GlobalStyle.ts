@@ -4,7 +4,7 @@ const { PrimarySaturated, Primary, PrimaryBrightness } = colorBrand;
 
 export default createGlobalStyle`
   :root {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   body {

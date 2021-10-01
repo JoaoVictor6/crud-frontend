@@ -7,7 +7,7 @@ export const Container = styled.label`
   font-size: 1rem;
   padding: .5rem .5rem .5rem .25rem;
   border-radius: 4px;
-  gap: .5rem;
+  gap: 8;
   align-items: center;
   cursor: pointer;
 
@@ -17,8 +17,8 @@ export const Container = styled.label`
   
   & > svg {
     fill: ${Primary};
-    height: 20px;
-    width: 20px;
+    height: 1.25rem;
+    width: 1.25rem;
   }
 
   &:hover {

@@ -9,6 +9,6 @@ export const Container = styled.section`
   box-shadow: 0px 1px 10px rgba(${hexToRgb(Black)}, .27);
 
   display: inline-block;
-  padding: 32px;
-  margin: 32px;
+  padding: 2rem;
+  margin: 2rem;
 `;

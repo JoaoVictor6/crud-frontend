@@ -4,7 +4,7 @@ export const Container = styled.section`
 `;
 
 export const TextAreaDiv = styled.div`
-  width: 405px;
+  width: 405.008px;
   height: 254px;
   & > textarea {
     border: none;
@@ -13,7 +13,7 @@ export const TextAreaDiv = styled.div`
     border-radius: 8px;
     border: 1px solid ${colorBrand.GreySaturated};
     
-    padding: 8px 4px;
+    padding: .5rem .25rem;
 
     resize: none;
     width: 100%;

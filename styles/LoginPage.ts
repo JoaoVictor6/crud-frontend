@@ -15,7 +15,6 @@ export const Form = styled.form`
 
 export const FormTitle = styled.h1`
   text-align: center;
-  margin-top: calc(48px - 32px);
 `;
 
 export const ButtonAndAnchorSection = styled.section`
